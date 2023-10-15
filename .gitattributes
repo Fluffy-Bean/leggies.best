@@ -1,1 +1,1 @@
-*.django = text diff=djangotemplate
+*.django linguist-language=HTML
