@@ -1,0 +1,7 @@
+{% extends 'base.django' %}
+{% block content %}
+    <h2>fun stuffs!!!</h2>
+    <ul>
+        <li><a href="/infinite">infinite leg</a></li>
+    </ul>
+{% endblock %}

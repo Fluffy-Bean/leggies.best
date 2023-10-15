@@ -1,0 +1,42 @@
+<html lang="en" data-theme="light">
+<head>
+    <title>Best Leggies</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="static/styles/style.css">
+</head>
+<body>
+    <nav>
+        <h1>best leggies!</h1>
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/fun">fun!</a></li>
+        </ul>
+        <span class="lineThrough">-</span>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <span class="lineThrough">-</span>
+        <p>leggy.best source</p>
+    </footer>
+
+    <script>
+        let lineThrough = document.querySelectorAll('.lineThrough');
+        lineThrough.forEach((line) => {
+            line.innerHTML = '-'.repeat(window.innerWidth / 9.6);
+        });
+
+        window.addEventListener('resize', () => {
+            lineThrough.forEach((line) => {
+                line.innerHTML = '-'.repeat(window.innerWidth / 9.6);
+            });
+        });
+    </script>
+</body>
+</html>

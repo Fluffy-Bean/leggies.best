@@ -1,0 +1,5 @@
+{% extends 'base.django' %}
+{% block content %}
+    <h2>leggy land!</h2>
+    <p>it is currently {{ time }} o'clock. want more leggies? Go to <a href="https://gay.leggy.dev">gay.leggy.dev</a>!</p>
+{% endblock %}

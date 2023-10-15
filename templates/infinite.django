@@ -1,0 +1,83 @@
+{% extends 'base.django' %}
+{% block content %}
+    <pre style="width: 15rem; margin: 0 auto;" id="leggy">
+    /|/|
+   /0 0 \
+(###    \_________.
+    \_,       / \. \
+       ||/---\| | \ \
+       ||     |/   \ |
+       ||     ||    '
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||
+       ||     ||</pre>
+    <script>
+        let leggy = document.getElementById('leggy');
+
+        window.addEventListener('scroll', () => {
+            console.log(window.innerHeight + window.scrollY);
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 150) {
+                leggy.innerHTML += "\n       ||     ||";
+            }
+        });
+    </script>
+{% endblock %}

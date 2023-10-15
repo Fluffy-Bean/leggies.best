@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+:root {
+    --text: #151515;
+    --background: #eee;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #eee;
+        --background: #151515;
+    }
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 1rem !important;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+html { font-size: 100%; }
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--background);
+    color: var(--text);
+}
+
+
+a {
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+a::after {
+    content: '\00a0<';
+    opacity: 0.1;
+}
+a::before {
+    content : '>\00a0';
+    opacity: 0.1;
+}
+a:hover, a:focus-visible {
+    outline: 0 solid transparent;
+    border: 0 solid transparent;
+}
+a:hover::after, a:focus-visible::after {
+    content: '<\00a0';
+    opacity: 1;
+}
+a:hover::before, a:focus-visible::before {
+    content: '\00a0>';
+    opacity: 1;
+}
+
+
+ul {
+    list-style: none;
+}
+ul li {
+    margin: 0;
+    padding: 0;
+}
+ul li::before {
+    content: '>\00a0';
+}
+
+nav {
+    padding: 1rem 2rem;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--background);
+    color: var(--text);
+
+    overflow: hidden;
+}
+nav > span {
+    width: 100%;
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    white-space: nowrap;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+}
+nav ul li::before {
+    content: '';
+}
+
+main {
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+
+    width: 100%;
+    max-width: 800px;
+}
+
+footer {
+    padding: 1rem 2rem;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text);
+
+    overflow: hidden;
+}
+footer > span {
+    width: 100%;
+    position: absolute;
+    top: -0.75rem;
+    left: 0;
+    white-space: nowrap;
+}
